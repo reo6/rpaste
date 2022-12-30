@@ -1,6 +1,8 @@
 # rpaste
 
-Simple paste service, written in 6 hours.
+Tiny paste service, written in 6 hours.
+
+Here is the running [instance](https://rpaste.pythonanywhere.com/) of the project.
 
 ## Setting up
 
