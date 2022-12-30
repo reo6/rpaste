@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "rpaste"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Tiny paste service, written in 6 hours."
+authors = ["ramazanemreosmanoglu <ramazanemre@protonmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
