@@ -31,7 +31,7 @@ def save():
         paste.save(db)
         return redirect(f"/p/{paste.id}")
     else:
-        return render_template("index.html", ishcaptcha=HCAPTCHA)
+        return redirect("/")
 
 @app.route("/p/<id>")
 def get_paste(id):
