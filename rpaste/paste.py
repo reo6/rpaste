@@ -49,6 +49,8 @@ class Paste:
             return None
 
     def save(self, db: TinyDB):
+        if not self.content or not self.description or not self.id or not self.date:
+            raise ValueError("Values cannot be empty.")
         db.insert({
             "content": self.content,
             "description": self.description,
