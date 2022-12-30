@@ -3,4 +3,4 @@
 *.log
 tmp/
 __pycache__/
-
+db.json
