@@ -2,9 +2,9 @@ from flask import Flask, \
                   render_template, \
                   request, \
                   redirect
-from .settings import DB_FILE, HCAPTCHA, BASE_DIR
+from rpaste.settings import DB_FILE, HCAPTCHA, BASE_DIR
 from tinydb import TinyDB
-from .paste import Paste
+from rpaste.paste import Paste
 from flask_hcaptcha import hCaptcha
 import os
 from dotenv import load_dotenv
