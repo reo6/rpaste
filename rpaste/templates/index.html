@@ -14,6 +14,9 @@
       <form method="post" action="/save">
         <textarea required placeholder="Your Code" name="content" class="input"></textarea> <br>
         <input required placeholder="Description" type="text" name="description" class="input"></input><br>
+        {% if ishcaptcha %}
+        {{ hcaptcha }} <br>
+        {% endif %}
         <button type="submit">Create</button>
       </form>
 
