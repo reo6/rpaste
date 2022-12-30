@@ -2,15 +2,17 @@ from flask import Flask, \
                   render_template, \
                   request, \
                   redirect
-from .settings import DB_FILE, HCAPTCHA
+from .settings import DB_FILE, HCAPTCHA, BASE_DIR
 from tinydb import TinyDB
 from .paste import Paste
 from flask_hcaptcha import hCaptcha
 import os
+from dotenv import load_dotenv
+load_dotenv(BASE_DIR / ".env")
 
 app = Flask(__name__, static_folder="static")
-app.config["HCAPTCHA_SITE_KEY"] = os.environ["HCAPTCHA_SITE_KEY"]
-app.config["HCAPTCHA_SECRET_KEY"] = os.environ["HCAPTCHA_SECRET_KEY"]
+app.config["HCAPTCHA_SITE_KEY"] = os.getenv("HCAPTCHA_SITE_KEY")
+app.config["HCAPTCHA_SECRET_KEY"] = os.getenv("HCAPTCHA_SECRET_KEY")
 hcaptcha = hCaptcha(app)
 
 db = TinyDB(DB_FILE)
