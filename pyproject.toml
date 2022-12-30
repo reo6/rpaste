@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.9"
 flask = "^2.2.2"
 tinydb = "^4.7.0"
+flask-hcaptcha = "^0.6.0"
 
 
 [build-system]
