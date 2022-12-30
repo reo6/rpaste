@@ -6,7 +6,7 @@ from .settings import DB_FILE
 from tinydb import TinyDB
 from .paste import Paste
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 db = TinyDB(DB_FILE)
 
 @app.route("/")
