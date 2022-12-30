@@ -3,18 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Rpaste</title>
+        <link rel="stylesheet" href="/static/index.css">
+        <title>rpaste</title>
     </head>
 
     <body>
-      <h1>Rpaste</h1>
+      <h1><a href="/">rpaste</a></h1>
       <p>Simple paste service</p>
 
       <form method="post" action="/save">
-        <textarea name="content"></textarea>
-        <input type="text" name="description"></input>
-        <button type="submit">Submit</button>
+        <textarea required placeholder="Your Code" name="content" class="input"></textarea> <br>
+        <input required placeholder="Description" type="text" name="description" class="input"></input><br>
+        <button type="submit">Create</button>
       </form>
+
+      <div class="footer">
+        Check out the <a class="projectlink" href="https://github.com/ramazanemreosmanoglu/rpaste">source code</a>.
+      </div>
     </body>
 </html>
